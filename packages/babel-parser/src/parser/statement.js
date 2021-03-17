@@ -1075,6 +1075,8 @@ export default class StatementParser extends ExpressionParser {
       this.raise(this.state.start, Errors.GeneratorInSingleStatementContext);
     }
     node.generator = this.eat(tt.star);
+    // CS
+    node.curry = this.eat(tt.atat);
 
     if (isStatement) {
       node.id = this.parseFunctionId(requireId);

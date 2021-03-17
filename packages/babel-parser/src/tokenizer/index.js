@@ -888,8 +888,15 @@ export default class Tokenizer extends ParserErrors {
         return;
 
       case charCodes.atSign:
-        ++this.state.pos;
-        this.finishToken(tt.at);
+        // CS
+        // eslint-disable-next-line no-case-declarations
+        const next = this.input.charCodeAt(this.state.pos + 1);
+        if (next === charCodes.atSign) {
+          this.finishOp(tt.atat, 2);
+        } else {
+          ++this.state.pos;
+          this.finishToken(tt.at);
+        }
         return;
 
       case charCodes.numberSign:

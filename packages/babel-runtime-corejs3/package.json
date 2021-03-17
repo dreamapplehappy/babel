@@ -809,6 +809,15 @@
       "./helpers/wrapRegExp.js"
     ],
     "./helpers/esm/wrapRegExp": "./helpers/esm/wrapRegExp.js",
+    "./helpers/currying": [
+      {
+        "node": "./helpers/currying.js",
+        "import": "./helpers/esm/currying.js",
+        "default": "./helpers/currying.js"
+      },
+      "./helpers/currying.js"
+    ],
+    "./helpers/esm/currying": "./helpers/esm/currying.js",
     "./package": "./package.json",
     "./package.json": "./package.json",
     "./regenerator": "./regenerator/index.js",

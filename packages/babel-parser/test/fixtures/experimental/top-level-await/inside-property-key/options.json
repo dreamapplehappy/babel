@@ -1,7 +1,4 @@
 {
-  "plugins": [
-    "topLevelAwait",
-    "classProperties"
-  ],
+  "plugins": ["topLevelAwait", "classProperties"],
   "sourceType": "module"
 }
